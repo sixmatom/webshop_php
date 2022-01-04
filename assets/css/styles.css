@@ -1,0 +1,14 @@
+.rounded {
+    padding-bottom: 0.5em;
+}
+
+body {
+    background-color: #3abed9;
+
+    padding-top: 50px
+}
+
+.card:hover {
+    background-color: #ADD8E6;
+
+}

@@ -1,0 +1,4 @@
+
+product = document.querySelector("#product")
+
+
