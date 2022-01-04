@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.1",
+    "jquery": "^3.6.0",
+    "vue": "^2.6.14"
+  },
+  "name": "webshop",
+  "version": "1.0.0",
+  "description": "my first webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tom sixma",
+  "license": "ISC"
+}
