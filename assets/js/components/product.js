@@ -25,7 +25,7 @@ Vue.component('product', {
                         <img class="card-img-top" :src="imagePath + screen.path" class="img-responsive" alt="services-1">
                         <div class="card-body">
                             <h5 class="card-title">{{screen.title}}</h5>
-                            <p class="card-text">
+                            <p class="card-text" class="textBlock">
                                 <ul v-html="screen.info">
                                     {{screen.info}}
                                 </ul>
