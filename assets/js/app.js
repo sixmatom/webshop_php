@@ -7,38 +7,41 @@ let app = new Vue({
         buttons: [],
         cart:[],
         navbar:[],
-        showHeader: true,
+        axiosInstance: '',
+        
     },
 
     mounted() {
         this.$on('add-to-cart', (id) => {
             this.products.push(id)
         })
+
+        this.$on('save-cart', () => {
+            this.saveToBackEnd()
+        })
     },
 
-    methods:{
-    
-    updateCart(id) {
-        this.shoppingCart.push(id);
+    methods: {
+        updateCart(id) {
+            this.products.push(id)
+        },
 
-        this.$refs.cartComponent.updateShoppingCart('testje');
-    },
+        saveToBackEnd() {
+            let form = new FormData
 
-    showCart() {
-        $('.layer').fadeIn();
+            form.append('products', JSON.stringify(this.products))
+            
+            // Header must be set to tell back-end that this is an Ajax call
+            axios.post('?page=home&action=savecard', form, {
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+            }).then(function (response) {
+                console.log(response.data)
+            }).catch(function (error) {
 
-        $('.cart').toggle({
-            direction: 'right',
-        });
-    },
-
-    fadeOutShoppingCart() {
-        this.$refs.cartComponent.closeShoppingCart();
-    },
-
-    landingPage() {
-
-    }
+            })
+        },
 }
 })
 
