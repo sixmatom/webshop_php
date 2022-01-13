@@ -15,10 +15,11 @@
         
         <script src="/assets/js/config.js"></script>
         <script src="/assets/js/data.js"></script>
-        <script src="/assets/js/components/product.js"></script>
         <script src="/assets/js/components/cart.js"></script>
         <script src="/assets/js/components/navbar.js"></script>
         <script src="/assets/js/components/buttons.js"></script>
+        <script src="/assets/js/components/product.js"></script>
+
         <title>Horren en raamdecoratie</title>
     </head>
 

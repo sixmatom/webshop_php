@@ -1,20 +1,18 @@
 Vue.component('buttonstyle', {
+    props: {
+
+    },
+        
+    
     data: function () {
         return {
-            color_data: colors,
+            
         }
          
     },
 
-    props: {
-        
-        
-    },
-
     methods: {
-        addToCart(id) {
-            this.$root.$emit('add-to-cart', id)
-        },
+        
         calcTextColor(hexcolor){
             hexcolor = hexcolor.replace("#", "");
             var r = parseInt(hexcolor.substr(0,2),16);
@@ -32,7 +30,7 @@ Vue.component('buttonstyle', {
     
     template:`
     <div class="btn-group">    
-        <div v-for="color in color_data">
+        <div v-for="color in colors">
             <button :style="{'background-color': color.bGC, 'color': calcTextColor(color.bGC)}" @click="addToCart(color.id)" > {{color.name}} 
             </button>
         </div>

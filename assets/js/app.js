@@ -5,8 +5,8 @@ let app = new Vue({
         appName: 'Horren en Raamedecoratie',
         products: [],
         buttons: [],
-        cart:[],
-        navbar:[],
+        cart: [],
+        navbar: [],
         axiosInstance: '',
         
     },
