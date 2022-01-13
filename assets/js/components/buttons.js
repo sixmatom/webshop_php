@@ -1,6 +1,6 @@
 Vue.component('buttonstyle', {
     props: {
-
+        
     },
         
     
@@ -11,7 +11,12 @@ Vue.component('buttonstyle', {
          
     },
 
+    
     methods: {
+            addToCart(id) {
+                this.$root.$emit('add-to-cart', id)
+            },
+
         
         calcTextColor(hexcolor){
             hexcolor = hexcolor.replace("#", "");
@@ -36,7 +41,5 @@ Vue.component('buttonstyle', {
         </div>
     </div>   
     ` 
-    
+      
 })
-Vue.config.devtools = true
-Vue.config.productionTip = false

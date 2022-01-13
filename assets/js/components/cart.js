@@ -24,5 +24,3 @@ Vue.component('shopping-cart', {
         <button>Click me</button>
         </div>`,
 })
-Vue.config.devtools = true
-Vue.config.productionTip = false
