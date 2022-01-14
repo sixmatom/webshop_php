@@ -61,5 +61,3 @@ Vue.component("tom-nav-bar",{
     
                 `
 })
-Vue.config.devtools = true
-Vue.config.productionTip = false

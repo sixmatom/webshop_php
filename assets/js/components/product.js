@@ -1,7 +1,7 @@
 Vue.component('product', {
     data: function () {
         return {
-            screen_data : screens,  
+              
         }
     },
 
@@ -19,13 +19,13 @@ Vue.component('product', {
     
     <div class=container>
         <div class="row">
-            <div class="col-md-6 col-lg-4 p-3" v-for="screen in screen_data">
+            <div class="col-md-6 col-lg-4 p-3" v-for="screen in screens">
                 <a style= "color:black" href="?page=alu-click">    
                     <div class="card" style="width 25rem">
-                        <img class="card-img-top" :src="imagePath + screen.path" class="img-responsive" alt="services-1">
+                        <img class="card-img-top" :src="'assets/images/' + screen.path" class="img-responsive" alt="services-1">
                         <div class="card-body">
                             <h5 class="card-title">{{screen.title}}</h5>
-                            <p class="card-text">
+                            <p class="card-text" class="textBlock">
                                 <ul v-html="screen.info">
                                     {{screen.info}}
                                 </ul>
@@ -40,5 +40,4 @@ Vue.component('product', {
             
                 `
 })
-Vue.config.devtools = true
-Vue.config.productionTip = false
+
