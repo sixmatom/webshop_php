@@ -16,3 +16,7 @@ body {
 .textBlock {
     height: 8rem
 }
+
+button {
+    height: 6rem
+}
