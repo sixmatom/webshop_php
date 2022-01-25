@@ -1,6 +1,7 @@
 Vue.component('product', {
     data: function () {
         return {
+            screens:[]
               
         }
     },
@@ -13,6 +14,23 @@ Vue.component('product', {
         addToCart(id) {
             this.$root.$emit('add-to-cart', id)
         }
+    },
+
+    created() {
+        let self = this;
+
+        // Get all screens calling function in controller (Ajax call)
+        axios({
+            method: 'GET',
+            url: '?page=home&function=getdata',
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        }).then(function(response) {
+            self.screens = response.data.screens;
+        }).catch(function(response) {
+
+        })
     },
     
     template:`

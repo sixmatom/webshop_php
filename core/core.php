@@ -8,12 +8,10 @@ function dd()
 {
     $args = func_get_args();
 
-    if (count($args))
-    {
+    if (count($args)) {
         echo "<pre>";
 
-        foreach ($args as $arg)
-        {
+        foreach ($args as $arg) {
             var_dump($arg);
         }
 
@@ -72,7 +70,6 @@ function isAjax()
 
 function exception_handler()
 {
-    
 }
 
 function getRequestMethod()
@@ -85,9 +82,9 @@ function getPage()
     return array_key_exists('page', $_GET) ? $_GET['page'] : 'home';
 }
 
-function getAction()
+function getFunction()
 {
-    return array_key_exists('action', $_GET) ? $_GET['action'] : 'index';
+    return array_key_exists('function', $_GET) ? $_GET['function'] : 'index';
 }
 
 function render($view, $data = array())
