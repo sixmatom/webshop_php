@@ -2,29 +2,35 @@
 
 function index($view)
 {
-    $screens = require 'data/screens.php';
+    // $screens = require 'data/screens.php';
 
     return require $_SERVER['DOCUMENT_ROOT'] . '/assets/views/' . $view . '.view.php';
 }
 
-function saveCard()
+function getData()
 {
-    dd($_REQUEST);
+    try {
+        $query = "SELECT * FROM `screens` WHERE `deleted_at` IS NULL";
+        $result = query($query);
+
+        $screens = $result->fetchAll(PDO::FETCH_ASSOC);
+
+        $success = true;
+        $message = "Success";
+    } catch (Exception $e) {
+        $screens = null;
+        $success = false;
+        $message = $e->getMessage();
+    }
 
     echo json_encode([
-        'success'   => true,
-        'message'   => 'Fruit added to order',
-        'redirect'  => '',
+        'success'   => $success,
+        'message'   => $message,
+        'screens'  => $screens,
     ]);
 }
 
-function getData()
+function registerSuccessfull()
 {
-    $sql = "SELECT * FROM `buttons` WHERE `deleted_at` IS NULL";
-    $res = query($sql);
-
-    echo json_encode([
-        'success'   => true,
-        'buttons'    => $res->fetchAll(PDO::FETCH_ASSOC),
-    ]);
+    return require $_SERVER['DOCUMENT_ROOT'] . '/assets/views/register-succesfull.view.php';
 }

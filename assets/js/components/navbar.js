@@ -28,7 +28,7 @@ Vue.component("tom-nav-bar",{
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"> </span>
         </button>
-        <div class="col-1lapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
@@ -37,26 +37,24 @@ Vue.component("tom-nav-bar",{
                     <a class="nav-link" href="#">Raamdecoratie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prijzen</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="?page=horren">Horren</a>
                 </li>
-                <li>
-                <div id="navbar-cart" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a id="cart-popover" class="btn" data-placement="bottom" title="Carrinho de Compras">
-                        <span class="glyphicon glyphicon-shopping-cart"></span>
-                        U$ 123,45
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Prijzen</a>
+                </li>
+                
+                <li class="nav-item">
+                <a class="nav-link" href="?page=register">register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="?page=login">login</a>
                 </li>
 
             </ul>
             
         </div>
     </div>
-
+    <button class="btn btn-sm btn-outline-secondary" type="button">basket</button>
 </nav>
     
                 `
