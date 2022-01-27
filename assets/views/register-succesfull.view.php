@@ -1,1 +1,1 @@
-<h1>Welocome to <?= "appName" ?></h1>
+<h1>Welocome to </h1>

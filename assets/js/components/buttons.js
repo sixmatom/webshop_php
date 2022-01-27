@@ -58,7 +58,7 @@ Vue.component('buttonstyle', {
     template:`
     <div class="btn-group">    
         <div v-for="color in colors">
-            <button :style="{'background-color': color.bGC, 'color': calcTextColor(color.bGC)}" @click="addToCart()" > {{color.name}} 
+            <button class=ralButton :style="{'background-color': color.bGC, 'color': calcTextColor(color.bGC)}" @click="addToCart()" > {{color.name}} 
             </button>
         </div>
     </div>`, 
