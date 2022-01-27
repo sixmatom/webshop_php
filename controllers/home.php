@@ -30,7 +30,7 @@ function getData()
     ]);
 }
 
-function registerSuccessful()
+function registerSuccessfull()
 {
-    return require $_SERVER['DOCUMENT_ROOT'] . '/assets/views/register-succful.view.php';
+    return require $_SERVER['DOCUMENT_ROOT'] . '/assets/views/register-succesfull.view.php';
 }
